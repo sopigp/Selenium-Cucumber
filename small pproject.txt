@@ -1,0 +1,90 @@
+Bikin folder :
+>lib
+>src
+	>main
+	>test
+	2.1 java
+		2.1.1 page Object
+		(5)LoginPageObject
+		(7)DashboardPage
+		2.1.2 step_definition
+		(2)RuncukesTest.java
+		(3)Hooks.java
+		(6)LoginSteps.java
+		2.1.3 utilities
+		(4)BaseClass.java
+>resources
+	>feature
+	(1)Login.feature
+
+Alur benernya :
+Search - list room - book now - popup - room & price summary
+scroll - searched result - popup -room & price summary 
+
+//a[@href='http://qa.cilsy.id:8080/en/the-hotel-prime/4-super-delux-rooms.html']/span[.='book now']
+
+
+---FAKER EMAIL ----
+if(email.equals("valid")){
+email = faker.name().username();
+email = email+"@gmail.com";
+}
+
+myaccountpage myaccount = new myaccountpage
+myaccount.RegisterEmail(email);
+
+
+-----YANG HARUS DI PERHATIKAN----
+- aturan OOP!! (done)
+- penamaan variabel & variabel jelas (done)
+- private (done)
+- report
+- negative automation
+
+
+YANG SUDAH DI VERIFY :
+My address
+personal information
+contact
+login
+myaccount
+booking
+home
+
+CEK BAHASA INGGRIS DI CUCUMBER!
+UBAH TANGGAL DI HOMEPAGE (check in & check out date), ORDER CONFRIMATION (check in date), ROOM PRICE SUMMARY (bulan 'oct')
+HAPUS MY ADDRESS DULU KALO MAU JALANIN TEST CASE!!
+buat method select baru di base class (skip)
+Tambahin case negative
+Bikin test case chart
+
+TEST CASE POSITIVE :
+CONTACT (ok)
+REGISTER (faker ok)
+PERSONAL INFORMATION (ok)
+ORDER HISTORY (ok)
+BOOKING HOTEL (ok)
+LOGIN (ok)
+MYADDRESS (ok)
+Booking Cart (ok)
+
+TEST CASE NEGATIVE :
+LOGIN (6)-->Ok
+REGISTER (4)-->Ok
+CONTACT (2)-->Ok
+MY ADDRESS (10)-->Ok
+PERSONAL INFO (6)-->Ok
+
+xpath kepanjangan :
+contact page 
+homepage (terutama yg tgl check in dan out)
+login page
+order confirmation (terutama yg tgl check in dan out)
+order history details page
+personal information
+rooms price summary
+searched results page
+
+Register :
+password kurang dari 5 lolos
+password ga di isi lolos
